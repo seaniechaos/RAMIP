@@ -1,0 +1,18 @@
+# RAMIP editorial beat definitions.
+#
+# Each beat groups stories by topic via keywords used during scoring/clustering.
+#
+# Schema:
+#   <beat_id>:
+#     description: <short description of the beat>
+#     keywords:
+#       - <keyword>
+#       - <keyword>
+#
+# Example (uncomment and edit):
+# ai:
+#   description: Artificial intelligence and machine learning
+#   keywords:
+#     - llm
+#     - anthropic
+#     - openai

@@ -1,0 +1,14 @@
+# RAMIP RSS feed sources, grouped by category.
+#
+# Schema:
+#   <category>:
+#     - name: <human readable feed name>
+#       url: <RSS or Atom feed URL>
+#
+# Example (uncomment and edit):
+# tech:
+#   - name: Example Tech Blog
+#     url: https://example.com/feed.xml
+# world:
+#   - name: Example World News
+#     url: https://example.com/world/rss
