@@ -11,6 +11,12 @@ on:
     - cron: "30 4 * * *"
   workflow_dispatch:
 
+env:
+  # Opt the bundled JavaScript actions (checkout, cache, setup-python) onto
+  # Node 24 ahead of GitHub's June 2nd, 2026 default switch. Silences the
+  # Node 20 deprecation warning; no behavior change.
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   brief:
     runs-on: ubuntu-latest
