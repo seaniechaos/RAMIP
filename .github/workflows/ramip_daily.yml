@@ -1,0 +1,49 @@
+name: RAMIP daily brief
+
+# Schedule: 04:30 UTC daily.
+# - 05:30 CET in winter (UTC+1)
+# - 06:30 CEST in summer (UTC+2)
+# GitHub Actions cron has no DST awareness. If you need exactly 05:30 local
+# year-round, add a second `- cron: "30 3 * * *"` entry and let run.py decide
+# which one to honor based on the current UTC offset of Europe/Paris.
+on:
+  schedule:
+    - cron: "30 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      # seen_items.db needs to persist across runs so dedup works day-over-day.
+      # The cache is keyed by run_id (always unique → always saves a new entry)
+      # with a stable restore-keys prefix so the next run reads the latest one.
+      - name: Restore seen_items.db
+        uses: actions/cache@v4
+        with:
+          path: seen_items.db
+          key: ramip-seen-items-${{ github.run_id }}
+          restore-keys: |
+            ramip-seen-items-
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          TO_EMAIL: ${{ secrets.TO_EMAIL }}
+        run: python run.py

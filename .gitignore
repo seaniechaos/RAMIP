@@ -11,3 +11,6 @@ fetched_items.json
 scored_items.json
 clustered_items.json
 brief.txt
+
+# Cron logs (local Option A)
+logs/
