@@ -4,11 +4,35 @@
 #   <category>:
 #     - name: <human readable feed name>
 #       url: <RSS or Atom feed URL>
-#
-# Example (uncomment and edit):
-# tech:
-#   - name: Example Tech Blog
-#     url: https://example.com/feed.xml
-# world:
-#   - name: Example World News
-#     url: https://example.com/world/rss
+
+geopolitical:
+  - name: Middle East Eye
+    url: https://www.middleeasteye.net/rss
+  - name: Al-Monitor
+    url: https://www.al-monitor.com/rss
+  - name: Reuters World
+    url: https://feeds.reuters.com/reuters/worldNews
+  - name: AP Top News
+    url: https://feeds.apnews.com/rss/apf-topnews
+  - name: Responsible Statecraft
+    url: https://responsiblestatecraft.org/feed
+
+energy:
+  - name: EIA Today in Energy
+    url: https://www.eia.gov/rss/todayinenergy.xml
+  - name: OilPrice.com
+    url: https://oilprice.com/rss/main
+  - name: Splash247
+    url: https://splash247.com/feed
+
+macro:
+  - name: Zero Hedge
+    url: https://feeds.feedburner.com/zerohedge/feed
+  - name: Mish Talk
+    url: https://mishtalk.com/feed
+  - name: Real Clear Markets
+    url: https://www.realclearmarkets.com/index.xml
+  - name: Fed Press Releases
+    url: https://www.federalreserve.gov/feeds/press_all.xml
+  - name: Treasury Press Releases
+    url: https://home.treasury.gov/news/press-releases.rss
