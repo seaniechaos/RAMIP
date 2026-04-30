@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Environment — only .env.template is tracked
+.env
+
+# Pipeline runtime outputs (regenerated each run)
+fetched_items.json
+scored_items.json
+clustered_items.json
