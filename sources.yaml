@@ -10,10 +10,14 @@ geopolitical:
     url: https://www.middleeasteye.net/rss
   - name: Al-Monitor
     url: https://www.al-monitor.com/rss
-  - name: Reuters World
-    url: https://feeds.reuters.com/reuters/worldNews
-  - name: AP Top News
-    url: https://feeds.apnews.com/rss/apf-topnews
+  - name: Al Jazeera English
+    url: https://www.aljazeera.com/xml/rss/all.xml
+  - name: Politico (US)
+    url: https://rss.politico.com/politics-news.xml
+  - name: Politico Europe
+    url: https://www.politico.eu/feed/
+  - name: Foreign Affairs
+    url: https://www.foreignaffairs.com/rss.xml
   - name: Responsible Statecraft
     url: https://responsiblestatecraft.org/feed
 
@@ -34,5 +38,3 @@ macro:
     url: https://www.realclearmarkets.com/index.xml
   - name: Fed Press Releases
     url: https://www.federalreserve.gov/feeds/press_all.xml
-  - name: Treasury Press Releases
-    url: https://home.treasury.gov/news/press-releases.rss

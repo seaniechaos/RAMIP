@@ -17,6 +17,13 @@ from typing import Any
 import feedparser
 import yaml
 
+# Some sites (e.g. Treasury) refuse feedparser's default User-Agent and
+# return an HTML "blocked" page that then fails XML parsing.
+feedparser.USER_AGENT = (
+    "Mozilla/5.0 (compatible; RAMIP/1.0; "
+    "+https://github.com/seaniechaos/ramip)"
+)
+
 ROOT = Path(__file__).resolve().parent
 SOURCES_PATH = ROOT / "sources.yaml"
 DB_PATH = ROOT / "seen_items.db"
