@@ -16,8 +16,12 @@ geopolitical:
     url: https://rss.politico.com/politics-news.xml
   - name: Politico Europe
     url: https://www.politico.eu/feed/
-  - name: Foreign Affairs
-    url: https://www.foreignaffairs.com/rss.xml
+  - name: War on the Rocks
+    url: https://warontherocks.com/feed/
+  - name: Lawfare
+    url: https://www.lawfaremedia.org/feed
+  - name: Council on Foreign Relations
+    url: https://www.cfr.org/rss-feeds
   - name: Responsible Statecraft
     url: https://responsiblestatecraft.org/feed
 
