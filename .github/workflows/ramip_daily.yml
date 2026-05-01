@@ -1,14 +1,14 @@
 name: RAMIP daily brief
 
-# Schedule: 04:30 UTC daily.
-# - 05:30 CET in winter (UTC+1)
-# - 06:30 CEST in summer (UTC+2)
-# GitHub Actions cron has no DST awareness. If you need exactly 05:30 local
-# year-round, add a second `- cron: "30 3 * * *"` entry and let run.py decide
+# Schedule: 05:00 UTC daily.
+# - 06:00 CET in winter (UTC+1)
+# - 07:00 CEST in summer (UTC+2)
+# GitHub Actions cron has no DST awareness. If you need exactly 06:00 local
+# year-round, add a second `- cron: "0 4 * * *"` entry and let run.py decide
 # which one to honor based on the current UTC offset of Europe/Paris.
 on:
   schedule:
-    - cron: "30 4 * * *"
+    - cron: "0 5 * * *"
   workflow_dispatch:
 
 env:
